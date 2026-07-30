@@ -10,11 +10,33 @@ class Connector
 {
 protected:
     std::string source;
+
 public:
     Connector(std::string);
-    virtual std::vector<std::string> extract();
+    virtual std::vector<std::string> extract() = 0;
     std::string getSource();
-    ~Connector();
+    virtual ~Connector();
+};
+
+class PostgresConnector : public Connector
+{
+public:
+    PostgresConnector();
+    std::vector<std::string> extract();
+};
+
+class RestApiConnector : public Connector
+{
+public:
+    RestApiConnector();
+    std::vector<std::string> extract();
+};
+
+class CsvConnector : public Connector
+{
+public:
+    CsvConnector();
+    std::vector<std::string> extract();
 };
 
 #endif

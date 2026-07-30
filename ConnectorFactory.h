@@ -11,8 +11,26 @@
 class ConnectorFactory
 {
 public:
-    virtual Connector *createConnector();
-    ~ConnectorFactory();
+    virtual Connector *createConnector() = 0;
+    virtual ~ConnectorFactory();
+};
+
+class PostgresFactory : public ConnectorFactory
+{
+public:
+    Connector *createConnector();
+};
+
+class RestApiFactory : public ConnectorFactory
+{
+public:
+    Connector *createConnector();
+};
+
+class CsvFactory : public ConnectorFactory
+{
+public:
+    Connector *createConnector();
 };
 
 #endif
