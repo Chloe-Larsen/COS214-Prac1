@@ -18,25 +18,4 @@ public:
     virtual ~Connector();
 };
 
-class PostgresConnector : public Connector
-{
-public:
-    PostgresConnector();
-    std::vector<std::string> extract();
-};
-
-class RestApiConnector : public Connector
-{
-public:
-    RestApiConnector();
-    std::vector<std::string> extract();
-};
-
-class CsvConnector : public Connector
-{
-public:
-    CsvConnector();
-    std::vector<std::string> extract();
-};
-
 #endif
