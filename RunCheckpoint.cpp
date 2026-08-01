@@ -4,17 +4,18 @@
 */
 #include "RunCheckpoint.h"
 
-RunCheckpoint::RunCheckpoint(int, std::vector<std::string>)
+RunCheckpoint::RunCheckpoint(int stage, std::vector<std::string> records)
 {
-
+    this->stage = stage;
+    this->records = records;
 }
 
-int RunCheckpoint::getStage() 
+int RunCheckpoint::getStage()
 {
-
+    return stage;
 }
 
 std::vector<std::string> RunCheckpoint::getRecords()
 {
-
+    return records;
 }

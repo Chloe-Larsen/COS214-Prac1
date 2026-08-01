@@ -38,13 +38,15 @@ void Pipeline::addStep(Transformation *step)
     steps.push_back(step);
 }
 
-RunCheckpoint *Pipeline::createCheckpoint() // Task 4 - Caleb
+RunCheckpoint *Pipeline::createCheckpoint()
 {
-    return NULL;
+    return new RunCheckpoint(stage, records);
 }
 
-void Pipeline::restore(RunCheckpoint *) // Task 4 - Caleb
+void Pipeline::restore(RunCheckpoint *checkpoint)
 {
+    stage = checkpoint->getStage();
+    records = checkpoint->getRecords();
 }
 
 Pipeline::~Pipeline()
