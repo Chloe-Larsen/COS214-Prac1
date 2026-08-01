@@ -4,20 +4,14 @@
 */
 #include "Transformation.h"
 
-Transformation::Transformation(std::string)
+Transformation::Transformation(std::string name)
 {
-}
-
-Transformation *Transformation::clone()
-{
-}
-
-std::vector<std::string> Transformation::apply(std::vector<std::string>)
-{
+    this->name = name;
 }
 
 std::string Transformation::getName()
 {
+    return name;
 }
 
 Transformation::~Transformation()

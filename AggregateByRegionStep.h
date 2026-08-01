@@ -10,8 +10,9 @@
 class AggregateByRegionStep : public Transformation
 {
 public:
-    Transformation *clone();
-    std::vector<std::string> apply(std::vector<std::string>);
+    AggregateByRegionStep();
+    Transformation *clone() override;
+    std::vector<std::string> apply(std::vector<std::string>) override;
 };
 
 #endif
