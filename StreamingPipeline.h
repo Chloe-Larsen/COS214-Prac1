@@ -6,6 +6,7 @@
 #define STREAMINGPIPELINE_H
 
 #include "Pipeline.h"
+#include "Connector.h"
 
 class StreamingPipeline : public Pipeline
 {

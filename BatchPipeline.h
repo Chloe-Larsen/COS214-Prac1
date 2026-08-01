@@ -6,6 +6,7 @@
 #define BATCHPIPELINE_H
 
 #include "Pipeline.h"
+#include "Connector.h"
 
 class BatchPipeline : public Pipeline
 {
