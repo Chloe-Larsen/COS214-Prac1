@@ -1,6 +1,11 @@
 #ifndef TRANSFORMATIONREGISTRY_H
 #define TRANSFORMATIONREGISTRY_H
 
+/*
+    Caleb Jennings, u25173805
+    Chloe Larsen, u25004141
+*/
+
 #include <vector>
 #include <string>
 #include <iostream>

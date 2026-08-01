@@ -1,3 +1,7 @@
+/*
+    Caleb Jennings, u25173805
+    Chloe Larsen, u25004141
+*/
 #include "PostgresConnector.h"
 
 PostgresConnector::PostgresConnector() : Connector("postgres")

@@ -1,10 +1,10 @@
+/*
+    Caleb Jennings, u25173805
+    Chloe Larsen, u25004141
+*/
 #include "Pipeline.h"
 
 void Pipeline::connect()
-{
-}
-
-void Pipeline::extract()
 {
 }
 
@@ -12,11 +12,7 @@ void Pipeline::transform()
 {
 }
 
-void Pipeline::load()
-{
-}
-
-Pipeline::Pipeline(ConnectorFactory *)
+Pipeline::Pipeline(ConnectorFactory *factory)
 {
 }
 
@@ -24,12 +20,12 @@ void Pipeline::run()
 {
 }
 
-void Pipeline::addStep(Transformation *)
-{
+void Pipeline::addStep(Transformation *step)
+{    
 }
 
 RunCheckpoint *Pipeline::createCheckpoint()
-{
+{    
 }
 
 void Pipeline::restore(RunCheckpoint *)

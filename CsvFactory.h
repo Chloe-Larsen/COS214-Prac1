@@ -3,6 +3,7 @@
 
 #include "Connector.h"
 #include "ConnectorFactory.h"
+#include "CsvConnector.h"
 
 class CsvFactory : public ConnectorFactory
 {

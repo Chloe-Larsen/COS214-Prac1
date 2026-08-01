@@ -1,3 +1,7 @@
+/*
+    Caleb Jennings, u25173805
+    Chloe Larsen, u25004141
+*/
 #ifndef TRANSFORMATION_H
 #define TRANSFORMATION_H
 
