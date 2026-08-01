@@ -6,7 +6,7 @@ CXXFLAGS := -Wall -Wextra -std=c++11 -g -I.
 LDFLAGS  := 
 
 # Name of your final executable
-TARGET   := program
+TARGET   := engine
 
 # ==========================================
 # 2. Automatic File Discovery (Root Directory)
