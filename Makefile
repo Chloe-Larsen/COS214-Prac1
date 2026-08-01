@@ -6,7 +6,7 @@ CXXFLAGS := -Wall -Wextra -std=c++11 -g -I.
 LDFLAGS  := 
 
 # Name of your final executable
-TARGET   := main
+TARGET   := program
 
 # ==========================================
 # 2. Automatic File Discovery (Root Directory)
@@ -24,7 +24,7 @@ DEPS := $(OBJS:.o=.d)
 # 3. Build Rules
 # ==========================================
 
-.PHONY: all clean run
+.PHONY: all clean run # signify that these commands are not files to prevent potential bugs
 
 # Default rule: builds the executable
 all: $(TARGET)
