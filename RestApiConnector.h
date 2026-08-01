@@ -1,3 +1,7 @@
+/*
+    Caleb Jennings, u25173805
+    Chloe Larsen, u25004141
+*/
 #ifndef RESTAPICONNECTOR_H
 #define RESTAPICONNECTOR_H
 
