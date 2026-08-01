@@ -8,11 +8,15 @@ LDFLAGS  :=
 # Name of your final executable
 TARGET   := engine
 
+# Name of the submission zip file
+ZIP_NAME := submission.zip
+
 # ==========================================
 # 2. Automatic File Discovery (Root Directory)
 # ==========================================
-# Find all .cpp files in the current directory
+# Find all .cpp and .h files in the current directory
 SRCS := $(wildcard *.cpp)
+HDRS := $(wildcard *.h)
 
 # Create a list of corresponding .o object files
 OBJS := $(SRCS:.cpp=.o)
@@ -24,7 +28,7 @@ DEPS := $(OBJS:.o=.d)
 # 3. Build Rules
 # ==========================================
 
-.PHONY: all clean run # signify that these commands are not files to prevent potential bugs
+.PHONY: all clean run zip
 
 # Default rule: builds the executable
 all: $(TARGET)
@@ -46,7 +50,12 @@ $(TARGET): $(OBJS)
 run: $(TARGET)
 	./$(TARGET)
 
-# Clean up build output (.o, .d, and executable)
+# Package source files, answers.pdf, and Makefile into a zip
+zip:
+	zip $(ZIP_NAME) $(SRCS) $(HDRS) answers.pdf Makefile
+	@echo "Successfully created $(ZIP_NAME)"
+
+# Clean up build output (.o, .d, executable, and zip file)
 clean:
-	rm -f $(OBJS) $(DEPS) $(TARGET)
+	rm -f $(OBJS) $(DEPS) $(TARGET) $(ZIP_NAME)
 	@echo "Cleaned all build artifacts."
