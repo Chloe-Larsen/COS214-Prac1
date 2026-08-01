@@ -16,7 +16,7 @@
 class TransformationRegistry
 {
 private:
-    std::map<std::string, Transformation> prototypes;
+    std::map<std::string, Transformation*> prototypes;
 
 public:
     void registerStep(std::string, Transformation *);
