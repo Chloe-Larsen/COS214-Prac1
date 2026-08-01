@@ -10,6 +10,8 @@
 
 class BatchPipeline : public Pipeline
 {
+    using Pipeline::Pipeline;
+
 protected:
     void extract();
     void load();

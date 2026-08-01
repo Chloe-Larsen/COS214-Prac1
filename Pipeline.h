@@ -33,7 +33,7 @@ public:
     void addStep(Transformation *);
     RunCheckpoint *createCheckpoint();
     void restore(RunCheckpoint *);
-    ~Pipeline();
+    virtual ~Pipeline();
 };
 
 #endif
