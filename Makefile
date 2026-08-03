@@ -50,9 +50,9 @@ $(TARGET): $(OBJS)
 run: $(TARGET)
 	./$(TARGET)
 
-# Package source files, answers.pdf, and Makefile into a zip
+# Package source files, Practical_Answers.pdf, and Makefile into a zip
 zip:
-	zip $(ZIP_NAME) $(SRCS) $(HDRS) answers.pdf Makefile
+	zip $(ZIP_NAME) $(SRCS) $(HDRS) Practical_Answers.pdf Makefile
 	@echo "Successfully created $(ZIP_NAME)"
 
 # Clean up build output (.o, .d, executable, and zip file)
