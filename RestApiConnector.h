@@ -11,7 +11,7 @@ class RestApiConnector : public Connector
 {
 public:
     RestApiConnector();
-    std::vector<std::string> extract();
+    std::vector<std::string> extract() override;
 };
 
 #endif

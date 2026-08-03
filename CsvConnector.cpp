@@ -8,6 +8,7 @@ CsvConnector::CsvConnector() : Connector("csv")
 {
 }
 
+
 std::vector<std::string> CsvConnector::extract()
 {
     std::vector<std::string> result;

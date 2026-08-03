@@ -11,7 +11,7 @@ class PostgresConnector : public Connector
 {
 public:
     PostgresConnector();
-    std::vector<std::string> extract();
+    std::vector<std::string> extract() override;
 };
 
 #endif
